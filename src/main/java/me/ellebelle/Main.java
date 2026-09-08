@@ -7,12 +7,18 @@ import java.util.ArrayList;
 public class Main {
     static void main() {
 
+        // 1.
         loop_1_16();
         System.out.println(loop_1_16_sum());
         ArrayList<Integer> numberList = loop_1_16_ArrayList();
         System.out.println(numberList);
         System.out.println(loop_1_16_ArrayList());  // sparar inte listan, skriver bara ut den.
 
+
+        // 2.
+        talet_65536();
+        talet_65536_igen();
+        talet_65536_igen_igen();
         }
 
 
@@ -20,7 +26,7 @@ public class Main {
 
 
 
-
+        // 1.
         public static void loop_1_16() {
         for (int i = 1; i < 17; i++)
             System.out.println(i);
@@ -39,4 +45,30 @@ public class Main {
         return numbers;
         }
 
+
+
+
+
+
+        // 2.
+        public static void talet_65536() {
+        int number = 65536;
+            while (number > 2) {
+                System.out.println(number);
+                number = number / 2;
+            }
+        }
+        public static void talet_65536_igen() {
+        for (int number = 65536; number > 2; number /= 2) // /= --> number = number / 2
+            System.out.println(number);
+        }
+        public static void talet_65536_igen_igen() {
+        int number = 65536;
+        while (number > 2) {
+            System.out.println(number);
+            number = number >> 1;   // number >>=1;
+        }
+        }
 }
+
+
