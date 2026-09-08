@@ -27,6 +27,9 @@ public class Main {
         System.out.println(antalTrueFalse_igen(values));
         boolean[] values_igen = {};
         System.out.println(antalTrueFalse_igen_igen(values_igen));
+
+
+        // 4.
     }
 
 
@@ -74,6 +77,8 @@ public class Main {
         }
     }
 
+
+    // 3.
     public static int antalTrueFalse() {
         boolean[] valueTrue = {true, false, true, false};
         int count = 0;
@@ -102,6 +107,9 @@ public class Main {
         }
         return count;
     }
+
+
+    // 4.
 
 }
 
