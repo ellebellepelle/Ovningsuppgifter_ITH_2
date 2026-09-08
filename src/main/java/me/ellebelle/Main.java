@@ -19,56 +19,68 @@ public class Main {
         talet_65536();
         talet_65536_igen();
         talet_65536_igen_igen();
-        }
 
 
+        // 3.
+        System.out.println(antalTrueFalse());
+    }
 
 
-
-
-        // 1.
-        public static void loop_1_16() {
+    // 1.
+    public static void loop_1_16() {
         for (int i = 1; i < 17; i++)
             System.out.println(i);
-        }
-        public static int loop_1_16_sum() {
+    }
+
+    public static int loop_1_16_sum() {
         // behöver nästa varv veta vad som hände i tidigare varvet? ja -> variabel behövs.
         int sum = 0;
-            for ( int i = 1; i < 17; i++)
-                sum += i;  // sum = sum + i;
-            return sum;
-        }
-        public static ArrayList<Integer> loop_1_16_ArrayList() {
+        for (int i = 1; i < 17; i++)
+            sum += i;  // sum = sum + i;
+        return sum;
+    }
+
+    public static ArrayList<Integer> loop_1_16_ArrayList() {
         ArrayList<Integer> numbers = new ArrayList<>();
         for (int i = 1; i < 17; i++)
             numbers.add(i);
         return numbers;
-        }
+    }
 
 
-
-
-
-
-        // 2.
-        public static void talet_65536() {
+    // 2.
+    public static void talet_65536() {
         int number = 65536;
-            while (number > 2) {
-                System.out.println(number);
-                number = number / 2;
-            }
+        while (number > 2) {
+            System.out.println(number);
+            number = number / 2;
         }
-        public static void talet_65536_igen() {
+    }
+
+    public static void talet_65536_igen() {
         for (int number = 65536; number > 2; number /= 2) // /= --> number = number / 2
             System.out.println(number);
-        }
-        public static void talet_65536_igen_igen() {
+    }
+
+    public static void talet_65536_igen_igen() {
         int number = 65536;
         while (number > 2) {
             System.out.println(number);
             number = number >> 1;   // number >>=1;
         }
+    }
+
+    public static int antalTrueFalse() {
+        boolean[] valueTrue = {true, false, true, false};
+        int count = 0;
+        for (int i = 0; i < valueTrue.length; i++) {
+            if (valueTrue[i]) {
+                count++;
+            }
         }
+        return count;
+    }
+
 }
 
 
