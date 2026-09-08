@@ -23,6 +23,10 @@ public class Main {
 
         // 3.
         System.out.println(antalTrueFalse());
+        boolean[] values = {true, true, true, true, true, false};
+        System.out.println(antalTrueFalse_igen(values));
+        boolean[] values_igen = {};
+        System.out.println(antalTrueFalse_igen_igen(values_igen));
     }
 
 
@@ -75,6 +79,24 @@ public class Main {
         int count = 0;
         for (int i = 0; i < valueTrue.length; i++) {
             if (valueTrue[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public static int antalTrueFalse_igen(boolean[] valueTrue) {
+        int count = 0;
+        for (int i = 0; i < valueTrue.length; i++) {
+            if (valueTrue[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public static int antalTrueFalse_igen_igen(boolean[] valueTrue) {
+        int count = 0;
+        for (boolean value : valueTrue) {
+            if (value) {
                 count++;
             }
         }
