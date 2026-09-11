@@ -29,15 +29,30 @@ public class TillfalligFranVideoSep9 {
         for (int i = 0; i < vInfo.length; i++) {
             String name = IO.readln("Voter name: ");
             int eNr = Integer.parseInt(IO.readln("Envelope number: "));
-            // skapa ett objekt av VoterInfo-klassen/recordet
-            VoterInfo voterInfo = new VoterInfo(name, eNr);
-            // lägg in det objektet i plats i i vInfo-arrayen
-            vInfo[i] = voterInfo;
+            // check if eNr is uniqe
+            if (isEnvelopeNumberUnique(eNr, vInfo)) {
+                // skapa ett objekt av VoterInfo-klassen/recordet
+                VoterInfo voterInfo = new VoterInfo(name, eNr);
+                // lägg in det objektet i plats i i vInfo-arrayen
+                vInfo[i] = voterInfo;
+            }
+            else {
+                IO.println("Invalid envelope number");
+                i--;
+                }
         }
-
-
     }
 
+
+    // metod för dubbel nr inmatning chec
+    static boolean isEnvelopeNumberUnique(int eNr, VoterInfo[] vInfo) {
+        for (int i = 0; i < vInfo.length; i++) {
+            // vInfo[i] ger bara arrayens plats --> .eNumber() är en metod som tar ut numret från arrayens plats.
+            if (vInfo[i] != null && eNr == vInfo[i].eNumber()) // must check for null to avoid NullPointerException
+                return false;
+        }
+        return true;
+    }
 
     /*
     och i dethär fallet så är det information som inte ska ändras så då använder jag ett keyword
