@@ -26,7 +26,8 @@ public class TillfalligFranVideoSep9 {
         // skapa en array med 10 platser där varje plats kan innehålla ett VoterInfo-objekt
         VoterInfo[] vInfo = new VoterInfo[10];
 
-        for (int i = 0; i < vInfo.length; i++) {
+        int i = 0;
+        while (i < vInfo.length) {
             String name = IO.readln("Voter name: ");
             int eNr = Integer.parseInt(IO.readln("Envelope number: "));
             // check if eNr is uniqe
@@ -40,6 +41,7 @@ public class TillfalligFranVideoSep9 {
                 IO.println("Invalid envelope number");
                 i--;
                 }
+            i++;
         }
     }
 
