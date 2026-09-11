@@ -36,12 +36,11 @@ public class TillfalligFranVideoSep9 {
                 VoterInfo voterInfo = new VoterInfo(name, eNr);
                 // lägg in det objektet i plats i i vInfo-arrayen
                 vInfo[i] = voterInfo;
+                i++;
             }
             else {
                 IO.println("Invalid envelope number");
-                i--;
                 }
-            i++;
         }
     }
 
